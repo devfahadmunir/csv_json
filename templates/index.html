@@ -1,0 +1,23 @@
+{% include 'base.html' %}
+<body>
+  {% block body %}
+
+  <h1>choose CSV files</h1>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{form.as_p}} <br />
+    <button type="submit">submit</button>
+  </form>
+
+  {% for message in messages %}
+  <div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>Message : </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %} {% endblock %}
+</body>

@@ -1,0 +1,3 @@
+i have done this work within two hours 
+set database, manage its admin and files are smoothly working along database
+json files output are attached and can perform live via code 
